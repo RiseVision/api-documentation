@@ -3,8 +3,9 @@
 
 ## Introduction
 
-OXY client API. All API endpoints are relative to the /api prefix. A lot of these api calls are deprecated since the move from nodeJS to TypeScript.
-If you need more help, please join our Oxycoin Technical channel on Telegram: https://t.me/oxycointech
+RISE client API. All API endpoints are relative to the /api prefix. A lot of these api calls are deprecated since the move from nodeJS to TypeScript and the recent (Q4 2019) move to Rise Core V2.
+
+If you need more help, please join our RISE OFFICIAL channel on Telegram: https://t.me/risevisionofficial
 
 All endpoints will return:
 
@@ -22,7 +23,7 @@ The API is only available after the client has successfully loaded,<br /> otherw
 In the case the client is not fully synced all routes may return intermediate/old values.
 
 Each API entry contains an example call to help provide understanding of how to use the call.
-These examples rely on curl being installed and Oxycoin running on the localhost.
+These examples rely on curl being installed and RISE CORE running on the localhost.
 The examples also include ```<field>;``` use this for easy identification of what needs to be changed for the call to function.
 
 ## Accounts
@@ -305,7 +306,7 @@ PUT /api/transactions
 
     {
     "secret" : "Secret key of account",
-    "amount" : /* Amount of transaction * 10^8. Example: to send 1.1234 Oxycoin, use 112340000 as amount */,
+    "amount" : /* Amount of transaction * 10^8. Example: to send 1.1234 RISE, use 112340000 as amount */,
     "recipientId" : "Recipient of transaction. Address or username.",
     "publicKey" : "Public key of sender account, to verify secret passphrase in wallet. Optional, only for UI",
     "secondSecret" : "Secret key from second transaction, required if user uses second signature"
@@ -480,7 +481,7 @@ Gets a list peer versions and build times
 
     {
       "success": true,
-      "version": "version of Oxycoin",
+      "version": "version of RISE",
       "build": "time of build"
     }
 
@@ -623,9 +624,9 @@ Gets the forging reward for blocks.
 
     curl -k -X GET http://localhost:9305/api/blocks/getReward
 
-## Get supply of available Oxycoin
+## Get supply of available RISE
 
-Gets the total amount of Oxycoin in circulation
+Gets the total amount of RISE in circulation
 
     GET /api/blocks/getSupply
 
@@ -970,7 +971,7 @@ Disables forging for a delegate on the client node.
 
 ## Get forged by account
 
-Get amount of Oxycoin forged by an account.
+Get amount of RISE forged by an account.
 
     GET /api/delegates/forging/getForgedByAccount?generatorPublicKey=generatorPublicKey
 
@@ -1411,4 +1412,4 @@ This API is based on the LISK API, the syntax is nearly the same.
 
 ## Informations
 Initial Written by List Team<br />
-Ported to Oxycoin-Github Repo by LeChuckDE
+Ported to RISE-Github Repo by @crypt0jan
